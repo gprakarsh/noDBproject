@@ -1,29 +1,45 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 import axios from 'axios';
+import News from './Components/News/News';
 
 class App extends Component {
-  componentDidMount(){
-      axios.get('/api/whatever')
-  }
+  // componentDidMount(){
+  //     axios.get('/api/whatever')
+  // }
+   constructor(){
+     super();
+     this.state={
+       userInput:"",
+       news:[
+        {id:1,
+         news:"This is a test",
+         userName:""   //to be used later alligator      
+        }        
+      ]       
+     }
+     this.handleUserInput=this.handleUserInput.bind(this);
+     this.handleSubmit=this.handleSubmit.bind(this);
+   }
+
+   handleUserInput(val){
+     this.setState({userInput:val})
+     console.log(this.state.userInput)
+   }
+
+   handleSubmit(){
+     let news = this.state.news.slice();
+     console.log(news);
+     let newId = news.length+1;
+     console.log(newId);
+     let {userInput} = this.state;
+     news.push({id:newId,news:userInput});
+     this.setState({news:news,userInput:""});     
+   }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <News handleUserInput={this.handleUserInput} handleSubmit={this.handleSubmit} news={this.state.news} userInput={this.state.userInput}/>  
       </div>
     );
   }
