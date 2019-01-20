@@ -1,18 +1,18 @@
 let news = [
     {id:1,
-    news:"Messi is the G.O.A.T.",
+    text:"News Flash 1",
     },
     {id:2,
-        news:"Messi is the G.O.A.T.",
+        text:"Messi is the G.O.A.T.",
     },
     {id:3,
-        news:"Messi is the G.O.A.T.",
+        text:"Messi is the G.O.A.T.",
     },
     {id:4,
-        news:"Messi is the G.O.A.T.",
+        text:"Messi is the G.O.A.T.",
     },
     {id:5,
-        news:"Messi is the G.O.A.T.",
+        text:"Messi is the G.O.A.T.",
     }
 ];
 let id = 6
@@ -22,9 +22,11 @@ module.exports = {
     },
     addNews: (req,res)=>{                          //Create
         req.body.id=id;
-        id++;
+        
         news.push(req.body);
-        res.sendStatus(201);
+        res.status(201).send(news);
+
+        id++;
     },
     deleteNews: (req,res)=>{                       //Delete
         news=news.filter((news1)=>{
