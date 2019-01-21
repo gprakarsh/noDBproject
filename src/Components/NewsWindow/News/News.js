@@ -49,6 +49,7 @@ export default class News extends Component {
                 
                 <span className="News_edit" onClick={() => this.setState({ editting: !this.state.editting, text })}><img src="http://iconsetc.com/icons-watermarks/simple-gray/bfa/bfa_edit/bfa_edit_simple-gray_512x512.png"/></span>
                 <News_Delete remove={remove} id={id}/>
+                
             </div>
         )
     }

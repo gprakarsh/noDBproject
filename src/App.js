@@ -5,12 +5,29 @@ import './App.css'
 import Table from './Components/Table/Table';
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state={
+      displayTable:false
+    }
+  }
   render() {
+    let {displayTable}= this.state;
     return (
       <div>
+      {
+      displayTable
+      ?
+      <div>
       <Header/>
+      <Table/>
+      </div>
+      :<div>
+        <Header/>
       <NewsWindow/>
-      {/* <Table/>                   */}
+      </div>
+      }
+      <span id="laLigaToggle"onClick={()=>this.setState({displayTable:!displayTable})}>La Liga Table</span>                 
       </div>
     )
   }

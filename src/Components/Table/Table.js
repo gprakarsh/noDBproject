@@ -14,13 +14,16 @@ export default class Table extends Component {
     }
 
     handleGetStandings() {
+        console.log('started')
         axios.get(`/api/standings`)
             .then(res => {
+                console.log('returned')
                 this.setState({ standings: res.data })
             })
 
         return (
             <div>
+                {console.log(this.state.standings)}
                 <TableMapper standings={this.state.standings} />
             </div>
         )
