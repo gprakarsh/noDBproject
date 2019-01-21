@@ -1,18 +1,8 @@
-/* html {
-background-image: url("https://i.pinimg.com/originals/c3/36/f1/c336f103fbb5e469ca9aa882c367f71d.jpg");
-background-repeat: no-repeat;
-background-size: 100vw auto;
-background-attachment: fixed;
-background-position: 0px -150px; 
-} */
-header{
-    text-align: center;
-    background-color: #004D98 ;
-    position: relative;
-    top:-4vh;
-    font-family: Helvetica, sans-serif;
-    font-weight: normal;
-}
-h3{
-    background-color:#A50044;
+html{
+    background-image: url("https://wallpapercave.com/wp/wp2203650.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-size: auto 100vh;
 }

@@ -1,20 +1,26 @@
 let news = [
     {id:1,
     text:"News Flash 1",
+    person:"admin"
     },
     {id:2,
         text:"Messi is the G.O.A.T.",
+        person:"admin"
     },
     {id:3,
         text:"Messi is the G.O.A.T.",
+        person:"admin"
     },
     {id:4,
         text:"Messi is the G.O.A.T.",
+        person:"admin"
     },
     {id:5,
         text:"Messi is the G.O.A.T.",
+        person:"admin"
     }
 ];
+
 let id = 6
 module.exports = {
     getAll: (req,res)=>{                            //Read
@@ -39,9 +45,9 @@ module.exports = {
         const {body} = req;
         news = news.map((news1)=>{
         if(news1.id === +id){
-            news1.news = body;
+            news1.text = body.text;           
         }
-        return news 
+        return news1 
         })
         res.status(200).send(news)
     }

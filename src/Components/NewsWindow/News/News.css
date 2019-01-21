@@ -1,0 +1,21 @@
+.newsAuthor{
+    color:#575758;
+    position:absolute;
+    left:10vw
+}
+.newsContainer{
+    position: relative;
+    top:6vh;
+    left:0vw;
+}
+.News_edit{
+    position: absolute;;
+    right:10vw;
+}
+.News_input{
+    height:10vh;
+    width:20vw;
+    position: relative;
+    bottom:4vh;
+    
+}
