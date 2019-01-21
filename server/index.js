@@ -3,12 +3,9 @@ const bodyParser = require('body-parser')
 const app = express();
 const ctrl = require('./controllers/controller')
 
-let lineup=[];
-// axios.get("https://api-football-v1.p.mashape.com/players/2018/33")
-// .then((res)=>{
-//     lineup=res.data;    
-// });
 app.use(bodyParser.json());
+
+app.get('/api/standings', ctrl.getStandings)
 
 app.get('/api/news',ctrl.getAll) //requires a string and a function
  //calling api is convention

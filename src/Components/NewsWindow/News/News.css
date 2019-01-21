@@ -19,3 +19,13 @@
     bottom:4vh;
     
 }
+.News_edit img{
+    width:auto;
+    height: 3vh;    
+}
+
+.News_edit{
+    position: absolute;
+    right:11vw;  
+    top:33vh;     
+}

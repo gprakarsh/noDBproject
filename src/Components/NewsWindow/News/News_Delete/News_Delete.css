@@ -1,4 +1,10 @@
 .News_delete{
-    position: absolute;;
-    right:13vw;
+    position: absolute;
+    right:13vw;  
+    top:33vh;     
+}
+.News_delete img{
+    width:auto;
+    height: 3vh;
+    opacity: 0.4;
 }
